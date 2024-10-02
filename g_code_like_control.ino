@@ -4,6 +4,8 @@ int steps = 0;
 int button = 0;
 int amount = 0;
 int speedm = 1000;
+int xtogo = 0;
+int ytogo = 0;
 
 void setup() {
   pinMode(2, INPUT); //arm button
@@ -29,13 +31,7 @@ void loop() {
       Serial.print("XAchse move: ");
       Serial.print(serialtext);
       amount = serialtext.toInt();
-      if (amount>0){
-        digitalWrite(4,LOW);
-        digitalWrite(8,HIGH);
-      }else if (amount<0){
-        digitalWrite(4,HIGH);
-        digitalWrite(8,LOW);
-      }  
+      xtogo = xtogo + amount;
     }
 
     if (serialtext.startsWith("Y")){
@@ -43,14 +39,7 @@ void loop() {
       Serial.print("YAchse move: ");
       Serial.print(serialtext);
       amount = serialtext.toInt();
-
-      if (amount>0){
-        digitalWrite(4,HIGH);
-        digitalWrite(8,HIGH);
-      }else if (amount<0){
-        digitalWrite(4,LOW);
-        digitalWrite(8,LOW);
-      }
+      ytogo = ytogo + amount;
     }
 
     if (serialtext.startsWith("S")){
@@ -60,10 +49,57 @@ void loop() {
       speedm = serialtext.toInt();
     }
 
-    // Enable motors
+    Serial.print("ToGo:");
+    Serial.print(" X:");
+    Serial.print(xtogo);
+    Serial.print(" Y:");
+    Serial.println(ytogo);
+
+    if (serialtext.startsWith("G")){
+      while (xtogo != 0 || ytogo != 0){
+        if (xtogo != 0){
+          if (xtogo>0){
+            digitalWrite(4,LOW);
+            digitalWrite(8,HIGH);
+          }else if (xtogo<0){
+            digitalWrite(4,HIGH);
+            digitalWrite(8,LOW);
+          }
+          steps = abs(xtogo);
+          motor(1, speedm);
+          if (xtogo > 0){
+            xtogo = xtogo - 1;
+          }else if (xtogo < 0){
+            xtogo = xtogo + 1;
+          }
+         
+        }
+    
+        if (ytogo != 0){
+          if (ytogo>0){
+            digitalWrite(4,HIGH);
+            digitalWrite(8,HIGH);
+          }else if (ytogo<0){
+            digitalWrite(4,LOW);
+            digitalWrite(8,LOW);
+          }
+          steps = abs(ytogo);
+          motor(1, speedm);
+          if (ytogo > 0){
+            ytogo = ytogo - 1;
+          }else if (ytogo < 0){
+            ytogo = ytogo + 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+void motor(int steps, int speedm){
+  // Enable motors
     digitalWrite(6, LOW);
     digitalWrite(10, LOW);
-    steps = abs(amount);
     for(stepCounter = 0; stepCounter < steps; stepCounter++) {
       digitalWrite(5,HIGH);
       digitalWrite(9,HIGH);
@@ -74,5 +110,4 @@ void loop() {
     }
     digitalWrite(6, HIGH);
     digitalWrite(10, HIGH);
-  }
 }
