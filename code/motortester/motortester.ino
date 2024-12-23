@@ -4,9 +4,9 @@ int steps = 0;
 int amount = 0;
 int speedm = 750;
 int mtogo = 0;
-int enpin = 6;
-int steppin = 5;
-int dirpin = 4;
+int enpin = 10;
+int steppin = 9;
+int dirpin = 8;
 
 void setup() {
     pinMode(enpin, OUTPUT); // Enable M1

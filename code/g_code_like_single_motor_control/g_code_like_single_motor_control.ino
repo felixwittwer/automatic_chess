@@ -7,8 +7,7 @@ int mtogo = 0;
 int ntogo = 0;
 
 void setup() {
-  pinMode(2, INPUT); //arm button
-  pinMode(6, OUTPUT); // Enable M1
+  pinMode(3, OUTPUT); // Enable M1
   pinMode(5, OUTPUT); // Step M1
   pinMode(4, OUTPUT); // Richtung M1
   pinMode(10, OUTPUT); // Enable M2
@@ -40,15 +39,17 @@ void loop() {
       Serial.print(serialtext);
       speedm = serialtext.toInt();
     }
-    //go command for movemen
+    //go command for movement
     if (serialtext.startsWith("G")){
     serialtext.remove(0,1);
       if (mtogo!=0){
-        motor(speedm,6,mtogo,5,4);
+        motor(speedm,3,mtogo,5,4);
+        Serial.println("M");
         mtogo = 0;
       }
       if (ntogo!=0){
         motor(speedm,10,ntogo,9,8);
+        Serial.println("N");
         ntogo = 0;
       }
     }
