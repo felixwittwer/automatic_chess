@@ -33,6 +33,7 @@ int xstop = 12;
 int ystop = 13;
 //magnet
 int magnetpin = 2;
+bool magnetstatus = false;
 
 void setup(){
   pinMode(m1enpin, OUTPUT);
@@ -62,6 +63,17 @@ void loop(){
       serialtext.remove(0,1);
       Serial.print(serialtext);
       ytogo += serialtext.toInt();
+    }
+    if (serialtext.startsWith("M")){
+      serialtext.remove(0,1);
+      Serial.println("Magnet");
+      if (magnetstatus == false){
+        magnetstatus = true;
+        digitalWrite(magnetpin, HIGH);
+      } else if (magnetstatus == true){
+        magnetstatus = false;
+        digitalWrite(magnetpin, LOW);
+      }
     }
     if (serialtext.startsWith("S")){
       serialtext.remove(0,1);
@@ -113,8 +125,8 @@ void movement(){
     Serial.println(ntogo);
   }
   Serial.println("finished");
-  digitalWrite(m1enpin, HIGH);
-  digitalWrite(m2enpin, HIGH);
+  // digitalWrite(m1enpin, HIGH);
+  // digitalWrite(m2enpin, HIGH);
   xtogo = 0;
   ytogo = 0;
 }
@@ -134,5 +146,5 @@ void motor(int speedm,int enpin, int steps, int steppin, int dirpin){
     delayMicroseconds(speedm);
 //      Serial.println(stepCounter);
   }
-  // digitalWrite(enpin, HIGH);
+  digitalWrite(enpin, HIGH);
 }
