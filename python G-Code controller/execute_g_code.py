@@ -1,21 +1,28 @@
 import serial
 import time
-
-# Set serial port and baudrate (GRBL operates at 115200 baud)
-ser = serial.Serial('COM8', 115200)  # Replace with your serial port
-
-# Open a G-Code file (e.g., 'example.gcode')
-with open('test.gcode', 'r') as f:
-    gcode_lines = f.readlines()
-
-# Send G-Code commands to GRBL
-for line in gcode_lines:
-    line = line.strip()  # Remove trailing newline characters
-    print(f'Sending: {line}')
-    ser.write(line.encode() + b'\n')  # Send G-Code line with newline character
-    time.sleep(0.1)  # Optional delay between commands
-    response = ser.readline().decode().strip()  # Read GRBL response
-    print(f': {response}')
-
-# Close serial port
-ser.close()
+ 
+# Open grbl serial port
+s = serial.Serial('COM8', 115200)
+ 
+# Open g-code file
+f = open('test.gcode','r')
+ 
+# Wake up grbl
+s.write("\r\n\r\n")
+time.sleep(2)   # Wait for grbl to initialize
+s.flushInput()  # Flush startup text in serial input
+ 
+# Stream g-code to grbl
+for line in f:
+    l = line.strip() # Strip all EOL characters for streaming
+    print('Sending: ' + l)
+    s.write(l + '\n') # Send g-code block to grbl
+    grbl_out = s.readline() # Wait for grbl response with carriage return
+    print(' : ' + grbl_out.strip())
+ 
+# Wait here until grbl is finished to close serial port and file.
+s.raw_input("  Press <Enter> to exit and disable grbl.")
+ 
+# Close file and serial port
+f.close()
+s.close()
