@@ -10,6 +10,6 @@ Instead of the original Repository the cusomt configuration in this repository s
 
 
 ##
-<img src="./circuit_diagrams/Motor_Diagram.png">
+<img src="./circuit_diagrams/Diagram.png">
 
-[Diagram in PDF form](./circuit_diagrams/Motor_Diagram.pdf)
+[Diagram in PDF form](./circuit_diagrams/Diagram.pdf)
