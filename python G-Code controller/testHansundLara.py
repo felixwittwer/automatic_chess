@@ -2,7 +2,7 @@ import serial
 import time
 
 # Konfiguration der seriellen Schnittstelle
-arduino_port = 'COMB3'  # Ersetze dies durch den richtigen Port für dein Arduino
+arduino_port = 'COM3'  # Ersetze dies durch den richtigen Port für dein Arduino
 baud_rate = 115200
 
 # Öffnen der seriellen Verbindung zum Arduino
