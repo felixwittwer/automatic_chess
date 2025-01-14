@@ -11,7 +11,7 @@ time.sleep(2)  # Warte, bis die Verbindung hergestellt ist
 
 # G-Code-Befehle
 gcode_commands = [
-    
+   
 ]
 
 # Senden der G-Code-Befehle an den Arduino
