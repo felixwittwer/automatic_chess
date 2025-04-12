@@ -1,0 +1,12 @@
+### Module positions - created on Sat Apr 12 23:25:40 2025 ###
+### Printed by Pcbnew version (6.0.10)
+## Unit = mm, Angle = deg.
+## Side : bottom
+# Ref     Val                Package                               PosX       PosY       Rot  Side
+A1        Raspberry_Pi_Zero  PinSocket_2x20_P2.54mm_Vertical  -119.3800   -60.7060   90.0000  bottom
+A2        Arduino_UNO_R3     Arduino_UNO_R3                   -215.7500   -70.5200  180.0000  bottom
+U1        BOB-09056          MODULE_BOB-09056                  -81.9150  -106.6800  180.0000  bottom
+U2        BOB-09056          MODULE_BOB-09056                 -104.7750  -106.6800  180.0000  bottom
+U3        BOB-09056          MODULE_BOB-09056                 -127.6450  -106.6850  180.0000  bottom
+U4        BOB-09056          MODULE_BOB-09056                 -150.4950  -106.6800  180.0000  bottom
+## End

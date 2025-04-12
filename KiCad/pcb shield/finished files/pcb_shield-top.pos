@@ -1,0 +1,30 @@
+### Module positions - created on Sat Apr 12 23:25:40 2025 ###
+### Printed by Pcbnew version (6.0.10)
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref     Val                     Package                                                        PosX       PosY       Rot  Side
+A3        Motor_Controller_Left   Pololu_Breakout-16_15.2x20.3mm                             194.9450   -88.9000   90.0000  top
+A4        Motor_Controller_Right  Pololu_Breakout-16_15.2x20.3mm                             194.9450  -110.4800   90.0000  top
+C1        100uF                   CP_Radial_D5.0mm_P2.50mm                                   223.5200   -84.0200   90.0000  top
+C2        100uF                   CP_Radial_D5.0mm_P2.50mm                                   223.5200  -105.4100   90.0000  top
+J1        _                       PinHeader_2x04_P2.54mm_Vertical                             78.1150  -121.9250   90.0000  top
+J2        _                       PinHeader_2x04_P2.54mm_Vertical                             78.1150  -101.6050   90.0000  top
+J3        _                       PinHeader_2x04_P2.54mm_Vertical                            100.9750  -121.2900   90.0000  top
+J4        _                       PinHeader_2x04_P2.54mm_Vertical                            100.9750  -101.6000   90.0000  top
+J5        _                       PinHeader_2x04_P2.54mm_Vertical                            123.8350  -121.9200   90.0000  top
+J6        _                       PinHeader_2x04_P2.54mm_Vertical                            123.8250  -101.6300   90.0000  top
+J7        _                       PinHeader_2x04_P2.54mm_Vertical                            146.6850  -121.9200   90.0000  top
+J8        _                       PinHeader_2x04_P2.54mm_Vertical                            146.6850  -101.6000   90.0000  top
+J9        E_Magnet                PinHeader_1x02_P2.54mm_Vertical                            172.7200   -97.7900   90.0000  top
+J10       Motor_Conn_L            PinHeader_1x04_P2.54mm_Vertical                            236.2200   -80.0300    0.0000  top
+J11       Motor_Conn_R            PinHeader_1x04_P2.54mm_Vertical                            236.2200  -101.6000    0.0000  top
+J12       Endstop_X               PinHeader_1x02_P2.54mm_Vertical                            172.7200   -87.6300   90.0000  top
+J13       Endstop_Y               PinHeader_1x02_P2.54mm_Vertical                            172.7200   -80.0100   90.0000  top
+J14       Barrel_Jack             TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal   243.8400   -71.1200   90.0000  top
+J15       Add_Conn                PinSocket_1x20_P2.54mm_Vertical                            119.3800   -67.0810  -90.0000  top
+J16       Add_Conn                PinSocket_1x20_P2.54mm_Vertical                            119.3800   -57.1500  -90.0000  top
+J17       Add_Conn                PinHeader_1x08_P2.54mm_Vertical                            180.1900  -121.9200   90.0000  top
+J18       Add_Conn                PinHeader_1x06_P2.54mm_Vertical                            202.0300  -121.9200   90.0000  top
+J19       Add_Conn                PinHeader_1x06_P2.54mm_Vertical                            192.8400   -67.5640  -90.0000  top
+Q1        TIP120                  TO-220-3_Vertical                                          172.7200  -110.4900    0.0000  top
+## End
