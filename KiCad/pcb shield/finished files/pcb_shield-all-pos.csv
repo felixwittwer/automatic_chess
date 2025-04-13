@@ -1,0 +1,31 @@
+Ref,Val,Package,PosX,PosY,Rot,Side
+"A1","Raspberry Pi Zero","PinSocket_2x20_P2.54mm_Vertical",-119.380000,-60.706000,90.000000,bottom
+"A2","Arduino_UNO_R3","Arduino_UNO_R3",-215.750000,-70.520000,180.000000,bottom
+"U1","BOB-09056","MODULE_BOB-09056",-81.915000,-106.680000,180.000000,bottom
+"U2","BOB-09056","MODULE_BOB-09056",-104.775000,-106.680000,180.000000,bottom
+"U3","BOB-09056","MODULE_BOB-09056",-127.645000,-106.685000,180.000000,bottom
+"U4","BOB-09056","MODULE_BOB-09056",-150.495000,-106.680000,180.000000,bottom
+"A3","Motor Controller Left","Pololu_Breakout-16_15.2x20.3mm",194.945000,-88.900000,90.000000,top
+"A4","Motor Controller Right","Pololu_Breakout-16_15.2x20.3mm",194.945000,-110.480000,90.000000,top
+"C1","100uF","CP_Radial_D5.0mm_P2.50mm",223.520000,-84.020000,90.000000,top
+"C2","100uF","CP_Radial_D5.0mm_P2.50mm",223.520000,-105.410000,90.000000,top
+"J1"," ","PinHeader_2x04_P2.54mm_Vertical",78.115000,-121.925000,90.000000,top
+"J2"," ","PinHeader_2x04_P2.54mm_Vertical",78.115000,-101.605000,90.000000,top
+"J3"," ","PinHeader_2x04_P2.54mm_Vertical",100.975000,-121.290000,90.000000,top
+"J4"," ","PinHeader_2x04_P2.54mm_Vertical",100.975000,-101.600000,90.000000,top
+"J5"," ","PinHeader_2x04_P2.54mm_Vertical",123.835000,-121.920000,90.000000,top
+"J6"," ","PinHeader_2x04_P2.54mm_Vertical",123.825000,-101.630000,90.000000,top
+"J7"," ","PinHeader_2x04_P2.54mm_Vertical",146.685000,-121.920000,90.000000,top
+"J8"," ","PinHeader_2x04_P2.54mm_Vertical",146.685000,-101.600000,90.000000,top
+"J9","E_Magnet","PinHeader_1x02_P2.54mm_Vertical",172.720000,-97.790000,90.000000,top
+"J10","Motor Conn L","PinHeader_1x04_P2.54mm_Vertical",236.220000,-80.030000,0.000000,top
+"J11","Motor Conn R","PinHeader_1x04_P2.54mm_Vertical",236.220000,-101.600000,0.000000,top
+"J12","Endstop X","PinHeader_1x02_P2.54mm_Vertical",172.720000,-87.630000,90.000000,top
+"J13","Endstop Y","PinHeader_1x02_P2.54mm_Vertical",172.720000,-80.010000,90.000000,top
+"J14","Barrel_Jack","TerminalBlock_Phoenix_MKDS-1,5-2_1x02_P5.00mm_Horizontal",243.840000,-71.120000,90.000000,top
+"J15","Add Conn","PinSocket_1x20_P2.54mm_Vertical",119.380000,-67.081000,-90.000000,top
+"J16","Add Conn","PinSocket_1x20_P2.54mm_Vertical",119.380000,-57.150000,-90.000000,top
+"J17","Add Conn","PinHeader_1x08_P2.54mm_Vertical",180.190000,-121.920000,90.000000,top
+"J18","Add Conn","PinHeader_1x06_P2.54mm_Vertical",202.030000,-121.920000,90.000000,top
+"J19","Add Conn","PinHeader_1x06_P2.54mm_Vertical",192.840000,-67.564000,-90.000000,top
+"Q1","TIP120","TO-220-3_Vertical",172.720000,-110.490000,0.000000,top
